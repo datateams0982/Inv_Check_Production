@@ -4,6 +4,7 @@ from retry import retry
 import os
 import json
 
+
 global config
 config_path = Path(__file__).parent.parent / "config/basic_config.json"
 if not os.path.exists(config_path):

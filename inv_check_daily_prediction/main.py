@@ -169,7 +169,7 @@ def main(end_date=date.today(), force_engineering=False):
 
     # Fill Missing Time
     df_list = [group[1] for group in stock.groupby(stock['StockNo'])]
-    timedf = pd.DataFrame(d[0]['ts'].unique(), columns=['ts'])
+    timedf = pd.DataFrame(stock['ts'].unique(), columns=['ts'])
     timedf = timedf.sort_values(by='ts')
     output_list = []
 
