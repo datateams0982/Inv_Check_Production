@@ -1,5 +1,6 @@
 # 晴/雨/陰定義 
 - 晴雨圖View: OpenData.dbo.INV_CHECK_WEATHER
+- 更新時間：每周一到五 晚上7:10分會更新好 （當日股市有交易才會更新）
 - ts：日期
 - StockNo: 股票代號
 - WEATHER: 晴雨圖分類預測結果
