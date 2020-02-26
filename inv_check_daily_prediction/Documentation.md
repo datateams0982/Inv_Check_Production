@@ -9,6 +9,10 @@
   - 雨天: Y_1_score 小於0.33者定義為雨天，代號-1
   - 陰天: 其餘為陰天，代號0
 
+# 如何運行Model Server
+docker run --restart always --name inv_check_model -d -v [source_directory]/tf_saved_model-weekly_whole_2019_20191206:/models/default/0000001 -p 172.17.0.1:8080:8080 -it gcr.io/cloud-automl-tables-public/model_server
+
+參考：https://cloud.google.com/automl-tables/docs/model-export
 
 # 執行指令
 
