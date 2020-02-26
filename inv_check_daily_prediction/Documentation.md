@@ -140,4 +140,9 @@ $ 0 19 * * 1-5 docker run --rm --name inv_check_daily_prediction --mount type=bi
 ## 將訊息傳至telegram(Sending message and result to telegram):
 - 若在此段出錯，檢視traceback並檢視exception_outbound中的outbound函式
 
+# Telegram Bots API
+## 如何知道想傳送的人的chatID?
+- 請該用戶搜尋 InvCheckDailyPrediction 這個telegram bot，并且發送訊息給該bot
+- 連入 https://api.telegram.org/bot1019885094:AAGjz96mPsceOdBS7gEyr-hsZSGC8awJtrM/getUpdates , 取得該聊天窗之chatID
+
 
