@@ -32,6 +32,9 @@ $ docker run --rm --name inv_check_daily_prediction --mount type=bind,source=[so
 ## run with specific date
 $ docker run --rm --name inv_check_daily_prediction --mount type=bind,source=[source_directory]/inv_check_daily_prediction,target=/inv_check_daily_prediction inv_check_daily_prediction python /inv_check_daily_prediction/main.py 2019-12-02
 
+## crontab
+$ 0 19 * * 1-5 docker run --rm --name inv_check_daily_prediction --mount type=bind,source=/home/s011474/inv_check_daily_prediction/inv_check_daily_prediction,target=/inv_check_daily_prediction inv_check_daily_prediction
+
 # 檔案結構
  
 ## config: 
