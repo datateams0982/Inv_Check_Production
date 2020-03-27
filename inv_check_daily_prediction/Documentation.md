@@ -145,4 +145,16 @@ $ 0 19 * * 1-5 docker run --rm --name inv_check_daily_prediction --mount type=bi
 - 請該用戶搜尋 InvCheckDailyPrediction 這個telegram bot，并且發送訊息給該bot
 - 連入 https://api.telegram.org/bot1019885094:AAGjz96mPsceOdBS7gEyr-hsZSGC8awJtrM/getUpdates , 取得該聊天窗之chatID
 
+# Create Label View
+- Code: 
+CREATE VIEW INV_CHECK_WEATHER AS
+SELECT
+ts,
+StockNo,
+CASE WHEN Y_1_score > 0.57 then 1
+     WHEN Y_1_score < 0.33 then -1
+     ELSE 0 END AS WEATHER
+FROM OpenData.dbo.INV_CHECK_OUTPUT
+WHERE ts = CONVERT(DATE, GETDATE())
+
 
